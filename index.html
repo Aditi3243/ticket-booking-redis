@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ticket Booking</title>
+</head>
+
+<body>
+
+<h2>Concurrent Ticket Booking System</h2>
+
+<button onclick="bookSeat('A1')">Book Seat A1</button>
+<button onclick="bookSeat('A2')">Book Seat A2</button>
+<button onclick="bookSeat('A3')">Book Seat A3</button>
+
+<p id="result"></p>
+
+<script>
+
+async function bookSeat(seat){
+
+let res = await fetch("/book",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({seat})
+})
+
+let data = await res.json()
+
+document.getElementById("result").innerText=data.message
+
+}
+
+</script>
+
+</body>
+</html>

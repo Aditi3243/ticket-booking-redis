@@ -1,0 +1,16 @@
+{
+  "name": "ticket-booking-redis",
+  "version": "1.0.0",
+  "description": "Concurrent Ticket Booking System using Redis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "redis": "^4.6.7"
+  }
+}
